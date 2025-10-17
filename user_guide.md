@@ -82,6 +82,7 @@ jobs:
 ```
 
 ## Reviewer Checklist
+
 - [ ] Steps run locally
 - [ ] Terminology is consistent
 - [ ] Spelling/Markdown checks pass
@@ -114,8 +115,10 @@ The workflow lives at `.github/workflows/docs-quality.yml`. Configuration files:
 ## Lab 2 – CI Checks (Fixed)
 
 ### Common mistakes (for the bot to catch)
+
 - This sentence definitely contains no typos now.
 - In this environment we test the linter.
 
 **Next steps**
 - Fix these issues without changing anything else in the file.
+
