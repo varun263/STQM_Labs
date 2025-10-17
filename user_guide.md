@@ -81,6 +81,12 @@ jobs:
           path: reports/
 ```
 
+## Reviewer Checklist
+- [ ] Steps run locally
+- [ ] Terminology is consistent
+- [ ] Spelling/Markdown checks pass
+
+
 ## Documentation Quality Checks (Lab 2)
 
 This repository includes a workflow that lints Markdown and runs a spell-check:
