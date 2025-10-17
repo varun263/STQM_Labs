@@ -1,0 +1,38 @@
+name: Docs Quality (markdownlint + codespell)
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+      - '.markdownlint.yaml'
+      - '.codespellrc'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.markdownlint.yaml'
+      - '.codespellrc'
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Markdown linting
+      - name: Markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            **/*.md
+
+      # Spelling checks
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install codespell
+        run: pip install codespell
+
+      - name: Run codespell
+        run: codespell --config .codespellrc

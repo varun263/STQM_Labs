@@ -1,0 +1,9 @@
+# codespell config
+[codespell]
+# Directories to skip
+skip = .git,node_modules,build,dist,reports
+# Domain-specific words to ignore (comma-separated)
+ignore-words-list = Postman,Newman,CI/CD,GitHub,repo,localhost,yaml,config,artefact,artefacts
+# Treat warnings as errors in CI by returning non-zero exit code when typos are found
+count =
+quiet-level = 2
